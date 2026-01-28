@@ -1,26 +1,7 @@
-import React from 'react'
 
 function AddTodo() {
   return (
-    // <div>
-    //   <form classNameName='flex flex-col'>
-    //     <label>Task title</label>
-    //     <input type='input'/>
-    //     <label>Periority</label>
-    //     <select >
-    //         <option >High</option>
-    //                     <option>medium</option>
-    //         <option>low</option>
-
-    //     </select>
-    //     <label>Description</label>
-    //     <input type='input' />
-        
-    //   </form>
-
-      
-    // </div>
-
+   
     <div className="relative flex flex-col rounded-xl bg-transparent">
   <h4 className="block text-xl font-medium text-slate-800">
     Add Task
