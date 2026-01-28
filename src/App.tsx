@@ -17,7 +17,7 @@ function App() {
     
      {
       todos.map((todo) =>(
-        <Todo key={todo.id} status={todo.status} title={todo.title} periority={todo.periority} description={todo.decription}/>
+        <Todo key={todo.id} done={todo.done} title={todo.title} periority={todo.periority} description={todo.decription}/>
       ))
      }
      </ul>

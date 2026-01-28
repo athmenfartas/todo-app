@@ -4,5 +4,5 @@
         "title" : "first task",
         "decription" : "this is discription for the first task",
         "periority" : "High", 
-        "status" : "pending"
+        "done" : true
     }]
