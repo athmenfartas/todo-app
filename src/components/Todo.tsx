@@ -24,7 +24,10 @@ function Todo({key , done ,title , periority , description } : {key: number ,don
             </div>
             <div className="mt-4 flex items-center justify-between">
                 <p className="text-sm font-medium text-gray-500">Periority: <span className="text-red-600">{periority}</span></p>
-                <button className="font-medium text-indigo-600 hover:text-indigo-500">Edit</button>
+                <div className=" space-x-1.5">
+<button type="button" className="text-white bg-blue-600 box-border border border-transparent hover:bg-brand-strong  shadow-xs font-medium leading-5 rounded-full text-sm px-3 py-2 ">Edit</button>
+<button type="button" className="text-white bg-red-600 box-border border border-transparent hover:bg-danger-strong  shadow-xs font-medium leading-5 rounded-full text-sm px-3 py-2 ">Delete</button>
+                </div>
             </div>
         </div>
     </li>
