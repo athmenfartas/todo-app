@@ -5,7 +5,7 @@ import { useForm, type SubmitHandler } from "react-hook-form"
 type FormData = {
   title: string
   decription: string 
-  periority :string
+  priority: "high" | "medium" | "low"
 }
 
 function AddTodo() {
@@ -15,7 +15,21 @@ function AddTodo() {
 
   const addTodoMutation = useMutation({
     mutationFn : async(newTodo : FormData) => {
-       
+       const res = await fetch("http://localhost:3000/todos",{
+        method: "Post",
+        headers : {
+          "Content-type" : "application/json"
+        },
+        body : JSON.stringify({
+          ...newTodo , 
+          done : false
+        })
+
+       })
+       if (!res.ok){
+        throw new Error("Failed to add todo")
+       }
+       return res.json()
 
     },
     onSettled: ()=>{queryClient.invalidateQueries({queryKey : ["todos"]})}
@@ -55,7 +69,7 @@ function AddTodo() {
   <select 
     className="w-full bg-transparent text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
     defaultValue=""
-    {...form.register("periority")}
+    {...form.register("priority")}
   >
     <option value="" disabled>
       Select priority

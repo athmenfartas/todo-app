@@ -5,7 +5,7 @@ import TodoList from "./components/todo-list"
 
 async function fetchTodos()  {
    
- const responce  = await fetch("/todos.json")
+ const responce  = await fetch("http://localhost:3000/todos")
  return await responce.json()
 }
 function useTodos() {
