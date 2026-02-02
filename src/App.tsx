@@ -4,7 +4,7 @@ import AddTodo from "./components/add-todo"
 import TodoList from "./components/todo-list"
 
 async function fetchTodos()  {
-   setTimeout(()=>{},5000) 
+   
  const responce  = await fetch("/todos.json")
  return await responce.json()
 }
