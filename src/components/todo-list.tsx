@@ -9,7 +9,7 @@ function TodoList({todos }:{todos:any}) {
     
      {
       todos.map((todo) =>(
-        <Todo key={todo.id} done={todo.done} title={todo.title} periority={todo.priority} description={todo.decription}/>
+        <Todo id={todo.id} done={todo.done} title={todo.title} periority={todo.priority} description={todo.decription}/>
       ))
      }
      </ul>
